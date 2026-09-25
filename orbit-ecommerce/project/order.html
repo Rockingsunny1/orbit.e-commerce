@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — ORBIT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>ORBIT</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="products.html#Wearables">Wearables</a>
+      <a href="products.html#Cameras">Cameras</a>
+      <a href="products.html#Audio">Audio</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" title="Toggle dark mode">🌙</button>
+      <a href="cart.html" class="cart-link">Cart <span class="cart-count" data-cart-count>0</span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="padding-top:36px;">
+  <div class="wrap">
+    <h1 style="font-size:2rem; margin-bottom:26px;">Checkout</h1>
+    <div class="checkout-layout" id="checkout-layout">
+      <form class="form-card" id="order-form" novalidate>
+        <h3 style="margin-bottom:18px;">Delivery details</h3>
+        <div class="field-row">
+          <div class="field">
+            <label for="order-name">Full name</label>
+            <input type="text" id="order-name" placeholder="Your full name">
+            <span class="error-text">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="order-phone">Phone number</label>
+            <input type="tel" id="order-phone" placeholder="10-digit mobile number">
+            <span class="error-text" id="order-phone-error">Please enter your phone number.</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="order-address">Delivery address</label>
+          <textarea id="order-address" rows="3" placeholder="House no., street, city, PIN code"></textarea>
+          <span class="error-text">Please enter a delivery address.</span>
+        </div>
+
+        <h3 style="margin:22px 0 14px;">Payment mode</h3>
+        <div class="pay-options">
+          <label class="pay-option">
+            <input type="radio" name="payment" value="Cash on Delivery" checked>
+            Cash on Delivery
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="UPI">
+            UPI
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="Card">
+            Card
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:26px;">Place order</button>
+      </form>
+
+      <aside class="summary-card">
+        <h3 style="margin-bottom:14px;">Order summary</h3>
+        <div id="mini-order-list"></div>
+        <div class="summary-row total"><span>Total</span><span id="mini-order-total">₹0</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> ORBIT. Student project — not a real store.</span>
+      <span>Made with HTML, CSS &amp; JavaScript</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
